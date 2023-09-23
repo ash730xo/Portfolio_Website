@@ -1,0 +1,37 @@
+/* Creates a box around the whole form while making it solid an off white */
+form {border: 3px solid #f1f1f1;}
+
+/* input styles
+    Makes the input box full size of the screen, while addig space between the words and text box, stacking them ontop of each other and giving it a light texbpx border color */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+  }
+
+
+  /* Button styles
+        Makes the background color a light blue with white text, points text when on it while making with 100% of the screen       
+  */
+  button {
+    background-color: rgb(56, 155, 217);
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* When the user hovers over the button in becomes a little bit more transparent */
+  button:hover {
+    opacity: 0.8;
+  }
+
+  /* Takes the login_container className and adds padding all around by 16px */
+  .login_container {
+    padding: 16px;
+  }

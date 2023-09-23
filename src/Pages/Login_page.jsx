@@ -1,6 +1,7 @@
 // Project #1 log in page 09/23/2023
 
 import React, { useState } from 'react'
+import '../Styles/loginStyles.css'
 
 function Login_page() {
 
@@ -10,8 +11,8 @@ function Login_page() {
     //onClick handle submit function 
     function handleSubmit(e) {
         e.preventDefault();
-        alert("Welcome " + username)
-        console.log(username, password)
+        alert(" Welcome " + username)
+        console.log(password)
     
     }
 
@@ -32,6 +33,7 @@ function Login_page() {
                         placeholder='Username'
                         value= {username}
                         onChange={event => setUserName(event.target.value)}
+                        
                         />
                 </div>
 
@@ -45,6 +47,7 @@ function Login_page() {
                         placeholder='Password'
                         value= {password}
                         onChange={event => setPassword(event.target.value)}
+                        
                     />
                 </div>
 
