@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 
 
+
+
 function Login_page() {
+
+    const [username, setUserName] = useState('')
 
     //onClick handle submit function 
     function handleSubmit(e) {
         e.preventDefault();
         alert("Submit has been clicked!")
+        console.log(username)
     
     }
 
@@ -22,7 +27,12 @@ function Login_page() {
             {/* username input & label */}
                 <div className='username_container'>
                     <label>Username:</label>
-                    <input type="text" placeholder='Username'/>
+                    <input 
+                        type="text" 
+                        placeholder='Username'
+                        value= {username}
+                        onChange={event => setUserName(event.target.value)}
+                        />
                 </div>
 
                 <br />
