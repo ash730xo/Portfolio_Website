@@ -20,7 +20,10 @@ function Login_page() {
   return (
     <>
         {/* Holds the login container the WHOLE page */}
-        <div>
+        <div className="page_container">
+
+            {/*  */}
+            <h1>Welcome, please login! </h1>
 
             {/* Holds the login page */}
             <form className='login_container'>

@@ -35,3 +35,17 @@ input[type=text], input[type=password] {
   .login_container {
     padding: 16px;
   }
+
+  h1 {
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Centers page div to the middle of the screen */
+  .page_container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
