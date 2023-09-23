@@ -8,9 +8,7 @@ function App() {
 
   return (
     <>
-      <Login_page />
-      
-      
+        <Login_page />
     </>
   )
 }
