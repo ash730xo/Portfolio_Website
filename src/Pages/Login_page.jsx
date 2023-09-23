@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
 
-
-
-
 function Login_page() {
 
     const [username, setUserName] = useState('')
+    const [password, setPassword] = useState('')
 
     //onClick handle submit function 
     function handleSubmit(e) {
         e.preventDefault();
-        alert("Submit has been clicked!")
-        console.log(username)
+        alert("Welcome " + username)
+        console.log(username, password)
     
     }
 
@@ -40,7 +38,12 @@ function Login_page() {
             {/* password input & label */}
                 <div className='password_container'>
                     <label>Password:</label>
-                    <input type="password" placeholder='Password'/>
+                    <input 
+                        type="password"
+                        placeholder='Password'
+                        value= {password}
+                        onChange={event => setPassword(event.target.value)}
+                    />
                 </div>
 
                 <br />
