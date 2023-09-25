@@ -6,7 +6,7 @@ import '../Styles/Navbar.css'
 function Navbar() {
   return (
     <>
-        <div>
+        <div className="Navbar">
           <Link to="/home" className="navbar_Link">Home</Link>
           <Link to="/about" className="navbar_Link">About</Link>
           <Link to="/contact" className="navbar_Link">Contact</Link>
