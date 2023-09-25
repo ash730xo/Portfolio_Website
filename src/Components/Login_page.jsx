@@ -1,7 +1,7 @@
 // Project #1 log in page 09/23/2023
 
 import React, { useState } from 'react'
-import '../Styles/loginStyles.css'
+import '../Styles/LoginStyles.css'
 
 function Login_page() {
 

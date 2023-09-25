@@ -25,7 +25,7 @@ function App() {
         </Routes>
       </nav>
       
-        {/* <Login_page /> */}
+        <Login_page />
     </>
   )
 }
