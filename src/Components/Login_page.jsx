@@ -26,8 +26,6 @@ function Login_page() {
 
         if (username == username && password == password) {
             // Store the user's session information in localStorage
-            //localStorage.setItem("isLoggedIn", true);
-      
             // Redirect the user to the home page
             window.location.href = "/";
           } else {
