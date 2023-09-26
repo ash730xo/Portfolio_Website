@@ -1,0 +1,6 @@
+.row1, .row2, .row3, .row4, .row5 {
+    width: 5%;
+    display: flex;
+    margin: 5px;;
+}
+
