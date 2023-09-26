@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 
-import Login_page from './Components/Login_page'
+// import Login_page from './Components/Login_page'
 import Navbar from './Components/navbar'
 import {Route, Routes} from 'react-router-dom'
 
@@ -25,7 +25,7 @@ function App() {
         </Routes>
       </nav>
       
-        <Login_page />
+        {/* <Login_page /> */}
     </>
   )
 }
