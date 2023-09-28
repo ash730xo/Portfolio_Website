@@ -62,6 +62,9 @@ class Calculator extends React.Component {
         }
 
         default: {
+          //for every other command, update the answer in the state
+          this.setState( {question: ( this.state.question += value)})
+          break;
 
         }
       }
