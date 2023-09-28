@@ -12,14 +12,11 @@ padding: 10px;
 text-align: right;
 }
 
-
-
 .button-row {
     width: 5%;
     display: flex;
     margin: 5px;;
 }
-
 
 button {
     margin: 5px;
