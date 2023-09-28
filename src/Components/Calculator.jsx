@@ -15,31 +15,32 @@ function Calculator() {
 
         <div className='button_container'>
         <div className="row1">
-            <button onClick={handleButton}>0</button>
-            <button onClick={handleButton}>.</button>
-            <button onClick={handleButton}>=</button>
+            <button label="0" onClick={handleButton}>0</button>
+            <button label="." onClick={handleButton}>.</button>
+            <button className="equals_button" label="=" onClick={handleButton}>=</button>
         </div>
         <div className="row2">
-            <button onClick={handleButton}>1</button>
-            <button onClick={handleButton}>2</button>
-            <button onClick={handleButton}>3</button>
-            <button onClick={handleButton}>+</button>
+            <button label="1" onClick={handleButton}>1</button>
+            <button label="2" onClick={handleButton}>2</button>
+            <button label="3" onClick={handleButton}>3</button>
+            <button label="+" onClick={handleButton}>+</button>
         </div>
         <div className="row3">
-            <button onClick={handleButton}>4</button>
-            <button onClick={handleButton}>5</button>
-            <button onClick={handleButton}>6</button>
-            <button onClick={handleButton}>-</button>
+            <button label="4" onClick={handleButton}>4</button>
+            <button label="5" onClick={handleButton}>5</button>
+            <button label="6" onClick={handleButton}>6</button>
+            <button label="-" onClick={handleButton}>-</button>
         </div>
         <div className="row4">
-            <button onClick={handleButton}>7</button>
-            <button onClick={handleButton}>8</button>
-            <button onClick={handleButton}>9</button>
-            <button onClick={handleButton}>*</button>
+            <button label="7" onClick={handleButton}>7</button>
+            <button label="8" onClick={handleButton}>8</button>
+            <button label="9" onClick={handleButton}>9</button>
+            <button label="*" onClick={handleButton}>*</button>
         </div>
         <div className="row5">
-            <button onClick={handleButton}>AC</button>
-            <button onClick={handleButton}>/</button>
+            <button label="AC" onClick={handleButton}>AC</button>
+            <button label="/" onClick={handleButton}>/</button>
+            <button className="delete_button" label="Delete" onClick={handleButton}>Delete</button>
         </div>
 
         </div>
