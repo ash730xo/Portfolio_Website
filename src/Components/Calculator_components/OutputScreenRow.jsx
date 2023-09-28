@@ -1,9 +1,13 @@
 import React from 'react'
 
-function OutputScreenRow() {
+//arrow function
+const OutputScreenRow = () => {
   return (
-    <div>OutputScreenRow</div>
+    <div className="screen-row">
+      {/* Created a read only text box */}
+      <input type="text" readOnly/>
+    </div>
   )
 }
 
-export default OutputScreenRow
+export default  OutputScreenRow

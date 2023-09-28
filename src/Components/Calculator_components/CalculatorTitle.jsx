@@ -1,8 +1,8 @@
 import React from 'react'
 
-function CalculatorTitle() {
+const CalculatorTitle = (props) => {
   return (
-    <div>CalculatorTitle</div>
+    <div className="calculator title">{props.value} </div>
   )
 }
 
