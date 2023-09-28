@@ -83,7 +83,7 @@ class Calculator extends React.Component {
   {
   return (
       <div className="frame">
-      <CalculatorTitle value="GeeksforGeeks Calculator"/>
+      <CalculatorTitle value="Calculator Inspired GeeksforGeeks "/>
       <div class="mainCalc">
       <OutputScreen answer={this.state.answer} question={this.state.question}/>
       <div className="button-row">
@@ -113,12 +113,11 @@ class Calculator extends React.Component {
       <div className="button-row">
           <Buttons handleClick={this.handleClick} label={'0'}/>
           <Buttons handleClick={this.handleClick} label={'='}/>
-      <div className="footer">by <a href="https://twitter.com/0xTranqui">tranqui.eth</a>
+
 
       </div>
       </div>
       </div>    
-      </div>
       );
   }
 }
