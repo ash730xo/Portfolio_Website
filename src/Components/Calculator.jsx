@@ -85,7 +85,7 @@ class Calculator extends React.Component {
   {
   return (
       <div className="frame">
-      <CalculatorTitle value="Calculator Inspired GeeksforGeeks "/>
+      <CalculatorTitle value="Calculator Inspired GeeksforGeeks " className="calculator-title"/>
       <div class="mainCalc">
       <OutputScreen answer={this.state.answer} question={this.state.question}/>
       <div className="button-row">

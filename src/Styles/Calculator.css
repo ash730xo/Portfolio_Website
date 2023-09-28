@@ -1,9 +1,25 @@
 
+#root {
+    text-align: center;
+}
+
+.screen-row input{
+width: 400px;
+background: #ddd;
+border: 0px;
+color: #222;
+padding: 10px;
+text-align: right;
+}
+
+
+
 .button-row {
     width: 5%;
     display: flex;
     margin: 5px;;
 }
+
 
 button {
     margin: 5px;
