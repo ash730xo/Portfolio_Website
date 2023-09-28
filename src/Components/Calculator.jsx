@@ -49,6 +49,16 @@ class Calculator extends React.Component {
 
         case "Delete": {
 
+          //sets str to the question state
+          var str = this.state.question
+
+          //takes the str and subtracts one 
+          str = str.substr(0, str.length - 1)
+
+          //sets the old state to the new str state
+          this.setState({question: str })
+          break
+
         }
 
         default: {
