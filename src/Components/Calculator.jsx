@@ -1,5 +1,7 @@
 import React from 'react'
 
+import '../Styles/Calculator.css'
+
 import CalculatorTitle from './Calculator_components/CalculatorTitle'
 import OutputScreen from './Calculator_components/OutputScreen'
 import Buttons from './Calculator_components/Buttons'
@@ -113,8 +115,6 @@ class Calculator extends React.Component {
       <div className="button-row">
           <Buttons handleClick={this.handleClick} label={'0'}/>
           <Buttons handleClick={this.handleClick} label={'='}/>
-
-
       </div>
       </div>
       </div>    

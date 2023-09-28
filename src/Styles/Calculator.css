@@ -1,5 +1,5 @@
 
-.row1, .row2, .row3, .row4, .row5 {
+.button-row {
     width: 5%;
     display: flex;
     margin: 5px;;
@@ -9,6 +9,4 @@ button {
     margin: 5px;
 }
 
-.delete_button, .equals_button {
-    width: 150px;
-}
+
