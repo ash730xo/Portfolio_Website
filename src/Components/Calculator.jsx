@@ -43,7 +43,8 @@ class Calculator extends React.Component {
         }
 
         case "Clear": {
-
+          this.setState( {question: "", answer: ""})
+          break;
         }
 
         case "Delete": {
