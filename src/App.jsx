@@ -5,10 +5,10 @@ import './App.css'
 import Navbar from './Components/navbar'
 import {Route, Routes} from 'react-router-dom'
 
-import About from './Pages/About'
-import Home from './Pages/home'
-import Contact from './Pages/contact'
-import Projects from './Pages/projects'
+import About from './Pages/loginPages/About'
+import Home from './Pages/loginPages/Home'
+import Contact from './Pages/loginPages/Contact'
+import Projects from './Pages/loginPages/Projects'
 
 
 function App() {

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Login_page from '../Components/Login_page'
+import Login_page from '../../Components/Login_page'
 
 
 function Projects() {
