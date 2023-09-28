@@ -5,6 +5,43 @@ import OutputScreen from './Calculator_components/OutputScreen'
 import Buttons from './Calculator_components/Buttons'
 
 class Calculator extends React.Component {
+  constructor(){
+    super();
+
+    //sets out default state 
+    this.state = {
+
+      //sets questions & answer to a blank state
+      question: '',
+      answer: ''
+    }
+
+    this.handleClick = this.handleClick.bind(this)
+
+    function handleClick (event) {
+      const value = event.target.value;
+
+      switch(value) {
+        case "=": {
+
+        }
+
+        case "Clear": {
+
+        }
+
+        case "Delete": {
+
+        }
+
+        default: {
+          
+        }
+      }
+    }
+  }
+
+
   render() {
     return (
       <div className="frame">
