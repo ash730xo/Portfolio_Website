@@ -22,7 +22,23 @@ class Calculator extends React.Component {
       const value = event.target.value;
 
       switch(value) {
+          // if it's an equal sign, use the eval module
+            // to evaluate the question ,convert the answer
+            // (in number) to String
         case "=": {
+          if( this.state.question !== "") {
+            var ans =""
+            try{
+              ans = eval(this.state.question)
+            } catch (err) {
+              this.setState({answer: "Math Errpr"})
+            }
+            if (ans === undefined) this.setState ({ answer: "Math Error"})
+
+            //updated answer in out answer state
+            else this.setState( {answer: ans, question: "" })
+            break;
+          }
 
         }
 
@@ -35,7 +51,7 @@ class Calculator extends React.Component {
         }
 
         default: {
-          
+
         }
       }
     }
