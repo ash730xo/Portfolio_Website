@@ -12,12 +12,33 @@ class Calculator extends React.Component {
         <div class="mainCalc">
           <OutputScreen />
           <div className="button-row">
-            <Buttons />
-            <Buttons />
-            <Buttons />
-            <Buttons />
+            <Buttons label={"Clear"}/>
+            <Buttons label={"Delete"}/>
+            <Buttons label={"."}/>
+            <Buttons label={"/"}/>
           </div>
-          
+          <div className="button-row">
+            <Buttons label={"7"}/>
+            <Buttons label={"8"}/>
+            <Buttons label={"9"}/>
+            <Buttons label={"*"}/>
+          </div>
+          <div className="button-row">
+            <Buttons label={"4"}/>
+            <Buttons label={"5"}/>
+            <Buttons label={"6"}/>
+            <Buttons label={"-"}/>
+          </div>
+          <div className="button-row">
+            <Buttons label={"1"}/>
+            <Buttons label={"2"}/>
+            <Buttons label={"3"}/>
+            <Buttons label={"+"}/>
+          </div>
+          <div className="button-row">
+            <Buttons label={"0"}/>
+            <Buttons label={"="}/>
+          </div>
         </div>
       </div>
     )

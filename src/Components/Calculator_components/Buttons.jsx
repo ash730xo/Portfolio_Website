@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Buttons()  {
+const Buttons = (props) => {
   return (
     <div> 
-      <h1>Test</h1>
+      <input type="button" value={props.label} />
     </div>
   )
 }

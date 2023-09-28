@@ -6,8 +6,8 @@ import OutputScreenRow from './OutputScreenRow'
 function OutputScreen() {
   return (
     <div className="screen">
-      <OutputScreen />
-      <OutputScreen />
+      <OutputScreenRow />
+      <OutputScreenRow />
     </div>
   )
 }
