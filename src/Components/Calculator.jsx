@@ -4,112 +4,124 @@ import CalculatorTitle from './Calculator_components/CalculatorTitle'
 import OutputScreen from './Calculator_components/OutputScreen'
 import Buttons from './Calculator_components/Buttons'
 
+
+//create a calss component calculator
 class Calculator extends React.Component {
-  constructor(){
-    super();
+  constructor() {
+      super();
 
-    //sets out default state 
-    this.state = {
+      //set our default state
+      this.state = {
+          question: '',
+          answer: ''
+  }
 
-      //sets questions & answer to a blank state
-      question: '',
-      answer: ''
-    }
+      //bind our handleClick method (sets 'this' explicitly
+      //to refer to this component) we did this because 'this'
+      //would refer to the source of the click events
+  this.handleClick = this.handleClick.bind(this); 
+}
 
-    this.handleClick = this.handleClick.bind(this)
+  handleClick(event) {
 
-    function handleClick (event) {
+      //get thhe value from the target element (button)
       const value = event.target.value;
 
-      switch(value) {
-          // if it's an equal sign, use the eval module
-            // to evaluate the question ,convert the answer
-            // (in number) to String
-        case "=": {
-          if( this.state.question !== "") {
-            var ans =""
-            try{
-              ans = eval(this.state.question)
-            } catch (err) {
-              this.setState({answer: "Math Errpr"})
-            }
-            if (ans === undefined) this.setState ({ answer: "Math Error"})
+      switch (value) {
+          case '=': {
 
-            //updated answer in out answer state
-            else this.setState( {answer: ans, question: "" })
-            break;
+              //if its an equal sign, use eval module
+              //to evalutate the question, convert the answer
+              //(in number) to string
+
+              if (this.state.question !=='')
+              {
+                  var ans='';
+                      try
+                          {
+                              ans = eval(this.state.question);
+                          }
+                      catch(err)
+                      {
+                          this.setState({answer: "Math Error"});
+                      }
+                      if (ans===undefined)
+                          this.setState({answer: "Math Error"});
+                      
+                      // update answer in our state
+
+                      else
+                          this.setState({answer: ans, question:''});
+                      break;       
+                  }
+              }
+              case 'Clear': {
+
+                  //if its the clear sign, just clearn our 
+                  //qusetion and answer in the state
+                  this.setState({question: '', answer: ''});
+                  break;
+              }
+
+              case 'Delete': {
+                  var str = this.state.question;
+                      str = str.substr(0, str.length-1);
+                      this.setState({question: str})
+                      break;
+              }
+          
+          default: {
+              
+              //for every other command, update the answer in the state
+              this.setState({question: this.state.question += value})
+              break;
           }
-
-        }
-
-        case "Clear": {
-          this.setState( {question: "", answer: ""})
-          break;
-        }
-
-        case "Delete": {
-
-          //sets str to the question state
-          var str = this.state.question
-
-          //takes the str and subtracts one 
-          str = str.substr(0, str.length - 1)
-
-          //sets the old state to the new str state
-          this.setState({question: str })
-          break
-
-        }
-
-        default: {
-          //for every other command, update the answer in the state
-          this.setState( {question: ( this.state.question += value)})
-          break;
-
-        }
       }
-    }
   }
-
-
-  render() {
-    return (
+  
+  render()
+  {
+  return (
       <div className="frame">
-        <CalculatorTitle value="Practice Calculator" />
-        <div class="mainCalc">
-          <OutputScreen />
-          <div className="button-row">
-            <Buttons label={"Clear"}/>
-            <Buttons label={"Delete"}/>
-            <Buttons label={"."}/>
-            <Buttons label={"/"}/>
-          </div>
-          <div className="button-row">
-            <Buttons label={"7"}/>
-            <Buttons label={"8"}/>
-            <Buttons label={"9"}/>
-            <Buttons label={"*"}/>
-          </div>
-          <div className="button-row">
-            <Buttons label={"4"}/>
-            <Buttons label={"5"}/>
-            <Buttons label={"6"}/>
-            <Buttons label={"-"}/>
-          </div>
-          <div className="button-row">
-            <Buttons label={"1"}/>
-            <Buttons label={"2"}/>
-            <Buttons label={"3"}/>
-            <Buttons label={"+"}/>
-          </div>
-          <div className="button-row">
-            <Buttons label={"0"}/>
-            <Buttons label={"="}/>
-          </div>
-        </div>
+      <CalculatorTitle value="GeeksforGeeks Calculator"/>
+      <div class="mainCalc">
+      <OutputScreen answer={this.state.answer} question={this.state.question}/>
+      <div className="button-row">
+          <Buttons handleClick={this.handleClick} label={'Clear'}/>
+          <Buttons handleClick={this.handleClick} label={'Delete'}/>
+          <Buttons handleClick={this.handleClick} label={'.'}/>
+          <Buttons handleClick={this.handleClick} label={'/'}/>
       </div>
-    )
+      <div className="button-row">
+          <Buttons handleClick={this.handleClick} label={'7'}/>
+          <Buttons handleClick={this.handleClick} label={'8'}/>
+          <Buttons handleClick={this.handleClick} label={'9'}/>
+          <Buttons handleClick={this.handleClick} label={'*'}/>
+      </div>
+      <div className="button-row">
+          <Buttons handleClick={this.handleClick} label={'4'}/>
+          <Buttons handleClick={this.handleClick} label={'5'}/>
+          <Buttons handleClick={this.handleClick} label={'6'}/>
+          <Buttons handleClick={this.handleClick} label={'-'}/>
+      </div>
+      <div className="button-row">
+          <Buttons handleClick={this.handleClick} label={'1'}/>
+          <Buttons handleClick={this.handleClick} label={'2'}/>
+          <Buttons handleClick={this.handleClick} label={'3'}/>
+          <Buttons handleClick={this.handleClick} label={'+'}/>
+      </div>
+      <div className="button-row">
+          <Buttons handleClick={this.handleClick} label={'0'}/>
+          <Buttons handleClick={this.handleClick} label={'='}/>
+      <div className="footer">by <a href="https://twitter.com/0xTranqui">tranqui.eth</a>
+
+      </div>
+      </div>
+      </div>    
+      </div>
+      );
   }
 }
+
 
 export default Calculator
