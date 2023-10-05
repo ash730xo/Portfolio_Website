@@ -1,3 +1,4 @@
+
 img {
     border-radius: 50%;
     height: 150px;
@@ -5,9 +6,19 @@ img {
     margin: 25px;
 }
 
+.getInTouch {
+    border-radius: 0%;
+    height: 380px;
+    width: 55%;
+}
+
 .contact_Container{
+    justify-content: center;
     display: flex;
-    padding: 25px;
-    padding-top: 50%;
     
+    
+}
+
+label {
+    margin-right: 5%;
 }

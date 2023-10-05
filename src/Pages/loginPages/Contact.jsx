@@ -5,6 +5,7 @@ import '../../Styles/Contact.css'
 import githubPhoto from '../../Images/github.jpg'
 import linkedinPhoto from '../../Images/linkedin.jpg'
 import emailPhoto from '../../Images/email.jpg'
+import contactMe from '../../Images/contact.jpg'
 
 function Contact() {
 
@@ -15,6 +16,8 @@ function Contact() {
 
 
   return (
+    <div className="wholepage">
+    <img src={contactMe} alt="Get in Touch!" className="getInTouch"></img>
     <div className="contact_Container">
       {/* What we want to display */}
 
@@ -50,6 +53,7 @@ function Contact() {
           <label for="Email"> Email </label>
         </a>
       </div>
+    </div>
     </div>
   )
 }
