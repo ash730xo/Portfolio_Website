@@ -1,7 +1,5 @@
 import React from 'react'
 
-import '../../Styles/Home.css'
-
 import home_Photo from './../../Images/home.jpg'
 
 function Home() {
