@@ -9,6 +9,8 @@ import About from './Pages/loginPages/About'
 import Home from './Pages/loginPages/Home'
 import Contact from './Pages/loginPages/Contact'
 import Projects from './Pages/loginPages/Projects'
+import Calculator from './Components/Calculator'
+import Login_page from './Components/Login_page'
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/about" element={<About />}/>
           <Route path="/contact" element={<Contact />}/>
           <Route path="/projects" element={<Projects />}/>
+          <Route path="/calculator" element={<Calculator />}/>
+          <Route path="/loginScreen" element={<Login_page />}/>
         </Routes>
       </nav>
       

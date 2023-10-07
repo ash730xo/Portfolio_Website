@@ -1,0 +1,19 @@
+.ProjectNav {
+    height: 25px;
+    padding: 25px;
+    
+}
+
+.ProjectNav > .project_link1{
+    position: absolute;
+    text-decoration: none;
+    margin: 15px;
+}
+
+
+.ProjectNav > .project_link2{
+    position: relative;
+    text-decoration: none;
+    margin: 15px
+}
+
